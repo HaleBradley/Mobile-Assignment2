@@ -44,11 +44,11 @@ fun MobileChallenges() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = "1. Platforms",
+                text = "1. Device Fragmentation",
                 fontSize = 20.sp,
             )
             Text(
-                text = "There are many different platforms for mobile software developers to use, so it would be a useful challenge to go and familiarize themselves with a native platform for Android and IOS, as well as a cross-platform that can be used to create application on both at the same time.",
+                text = "Creating apps that function on any device. This takes in screen sizes, hardware, and other limitations between devices.",
                 fontSize = 12.sp,
             )
         }
@@ -57,11 +57,11 @@ fun MobileChallenges() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = "2. Languages",
+                text = "2. OS Fragmentation",
                 fontSize = 20.sp,
             )
             Text(
-                text = "From Swift to Kotlin, learning new languages in the field of mobile development can be a great challenge for beginners.",
+                text = "Creating apps that work on different OS's, such as IOS and Android. You can use Native development to create apps for either OS or cross-platform development for both OS's.",
                 fontSize = 12.sp,
             )
         }
@@ -70,11 +70,11 @@ fun MobileChallenges() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = "3. UI/UX Design",
+                text = "3. Rapid Changes",
                 fontSize = 20.sp,
             )
             Text(
-                text = "Whether it be looking at wireframes for app layouts, or creating your own, finding a way to design UI efficiently can be a good challenge.",
+                text = "OS's have constant updates, some that are code breaking. As a developer, you have to keep up with these changes and fix apps accordingly.",
                 fontSize = 12.sp,
             )
         }
@@ -83,11 +83,11 @@ fun MobileChallenges() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = "4. Testing",
+                text = "4. Tool Support",
                 fontSize = 20.sp,
             )
             Text(
-                text = "Everyone can write code, but not everyone test's it. Writing test for a pre-made application or one you created yourself can help you in all future mobile development projects.",
+                text = "Since mobile software development needs new packages/tools to create application compared to desktop applications, there is a lack of tools that can be used in the development process making it slower than desktop/web applications.",
                 fontSize = 12.sp,
             )
         }
@@ -96,11 +96,11 @@ fun MobileChallenges() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = "5. Portfolio Project",
+                text = "5. Low Tolerance",
                 fontSize = 20.sp,
             )
             Text(
-                text = "Create a basic application that lists all the projects you have created, a brief descriptions for the project, and a link to the repo for viewing.",
+                text = "There are a lot of apps on the PlayStore, making the app market very competitive. Ensuring your app stands out and runs better than the rest is key to succeed in the field.",
                 fontSize = 12.sp,
             )
         }
