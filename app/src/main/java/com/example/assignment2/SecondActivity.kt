@@ -110,7 +110,7 @@ fun MobileChallenges() {
 @Composable
 fun ReturnButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
     OutlinedButton(onClick = { onClick() }) {
-        Text("Go back to Main Activity")
+        Text("Main Activity")
     }
 }
 
