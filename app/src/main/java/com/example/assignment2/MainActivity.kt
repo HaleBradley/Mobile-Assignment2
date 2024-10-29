@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Assignment2Theme {
-                Scaffold("Assignment 2", "Main Activity") { MainContent(onClickExplicitly = { startSecondActivityExplicitly() }, onClickImplicitly = { startSecondActivityImplicitly() }) }
+                Scaffold("Assignment 2", "Main Activity") { MainContent(onClickExplicitly = { startSecondActivityExplicitly() }, onClickImplicitly = { startSecondActivityImplicitly() }, onClickImage = { startViewImageActivity() }) }
             }
         }
     }
@@ -43,6 +43,11 @@ class MainActivity : ComponentActivity() {
 
     private fun startSecondActivityImplicitly() {
         val intent = Intent("com.example.SECOND_ACTIVITY")
+        startActivity(intent)
+    }
+
+    private fun startViewImageActivity() {
+        val intent = Intent("com.example.THIRD_ACTIVITY")
         startActivity(intent)
     }
 }
@@ -94,9 +99,9 @@ fun Scaffold(topBarText: String, bottomBarText: String, content: @Composable () 
 }
 
 @Composable
-fun MainContent(onClickExplicitly: () -> Unit, onClickImplicitly: () -> Unit) {
+fun MainContent(onClickExplicitly: () -> Unit, onClickImplicitly: () -> Unit, onClickImage: () -> Unit) {
     Name()
-    Buttons(onClickExplicitly = { onClickExplicitly() }, onClickImplicitly = { onClickImplicitly() })
+    Buttons(onClickExplicitly = { onClickExplicitly() }, onClickImplicitly = { onClickImplicitly() }, onClickImage = { onClickImage() })
 }
 
 @Composable
@@ -108,13 +113,16 @@ fun Name(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun Buttons(onClickExplicitly: () -> Unit, onClickImplicitly: () -> Unit ,modifier: Modifier = Modifier) {
+fun Buttons(onClickExplicitly: () -> Unit, onClickImplicitly: () -> Unit , onClickImage: () -> Unit, modifier: Modifier = Modifier) {
     Column {
         OutlinedButton(onClick = { onClickExplicitly() }) {
             Text("Start Activity Explicitly")
         }
         OutlinedButton(onClick = { onClickImplicitly() }) {
             Text("Start Activity Implicitly")
+        }
+        OutlinedButton(onClick = { onClickImage() }) {
+            Text("View Image Activity")
         }
     }
 }
@@ -123,6 +131,6 @@ fun Buttons(onClickExplicitly: () -> Unit, onClickImplicitly: () -> Unit ,modifi
 @Composable
 fun MainPreview() {
     Assignment2Theme {
-        Scaffold("Assignment 2", "Main Activity") { MainContent(onClickExplicitly = {}, onClickImplicitly = {}) }
+        Scaffold("Assignment 2", "Main Activity") { MainContent(onClickExplicitly = {}, onClickImplicitly = {}, onClickImage = {}) }
     }
 }
