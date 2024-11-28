@@ -7,6 +7,10 @@
         android:required="true" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <permission
+        android:name="com.example.assignment2.MSE412"
+        android:protectionLevel="dangerous" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -30,7 +34,8 @@
         </activity>
 
         <activity android:name=".SecondActivity"
-            android:exported="true">
+            android:exported="true"
+            android:permission="com.example.assignment2.MSE412">
             <intent-filter>
                 <action android:name="com.example.SECOND_ACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
